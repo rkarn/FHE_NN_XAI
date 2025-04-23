@@ -1,0 +1,16 @@
+Step by step demo for the FHE encrypted neural network: https://github.com/IBM/fhe-toolkit-linux
+Please click on the video demo icon to see the step by step process. 
+It is run on laptop.
+Run the command to run FHE notebook on the docker container: docker run -p 8889:8888 -d --rm --name helayers-lab icr.io/helayers/helayers-pylab-x86_64:latest
+Then in the browser: http://127.0.0.1:8889/lab/?token=demo-experience-with-fhe-and-python 
+
+
+FHE ibrary: Concrete-ml: https://github.com/zama-ai/concrete-ml
+
+On the laptop: Run the docker container through cmd.exe : 
+docker pull zamafhe/concrete-ml:latest 
+docker run --rm -it zamafhe/concrete-ml /bin/bash   
+
+Run the docker from the "Docker desktop" app. 
+
+The code is in the home folder of the container. File name: fhe_neuralnetwork_mnist.py
