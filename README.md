@@ -25,3 +25,17 @@ These operations are not FHE-friendly:
 - FHE schemes typically support only a subset of operations (additions, multiplications).
 - No native support for branching or floating-point arithmetic (unless approximated).
 - SHAP involves significant model re-evaluation, which is costly under FHE.
+
+
+Potential Workaround:
+- Train SHAP Explainer in Plaintext: Yes, this is fine.
+- Encrypted SHAP Value Computation: Only possible if you:
+   - Use a simple linear model for SHAP (like KernelSHAP with linear approximation).
+   - Replace SHAP computation with a linear approximation that is homomorphic-friendly.
+   - Limit the number of features and use quantization techniques.
+
+
+Summary:
+- Inference part is feasible under FHE.
+- Encrypted SHAP computation is theoretically possible but very limited and extremely resource-intensive in practice.
+- You're better off using approximated or simplified methods for explainability under FHE.
