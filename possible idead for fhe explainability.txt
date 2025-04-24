@@ -1,0 +1,18 @@
+1. Feature Importance via Sensitivity Analysis (FHE-compatible)
+You can measure feature importance under FHE with simplified techniques:
+For each feature:
+Homomorphically perturb the encrypted input (e.g., zero it or add a constant).
+Compute the change in encrypted output.
+Larger changes = higher feature importance.
+
+# Pseudocode-like sketch
+for i in range(num_features):
+    x_test_mod = x_test_encrypted.copy()
+    x_test_mod[i] += delta  # or set to 0
+    y_pred_mod = fhe_model.predict(x_test_mod)
+    importance[i] = decrypt(y_pred_mod - y_pred_original)
+
+Pros:
+- Fully homomorphic.
+- Linear operations only.
+- Easy to parallelize.

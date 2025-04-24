@@ -7,7 +7,7 @@ enhancing trust in secure machine learning applications. The notebook `09_Neural
 
 
 ### What we're Proposing:
-FHE-Inference: Run inference on encrypted MNIST data using an encrypted neural network, then decrypt the result and compare accuracy with plaintext inference.
+FHE-Inference: Run inference on encrypted data using an encrypted neural network, then decrypt the result and compare accuracy with plaintext inference. The proposal document is `XAI_FHE_NN.pdf`.
 
 
 SHAP Explainability (Encrypted): Train a SHAP explainer on raw Xtrain. Use FHE-encrypted Xtest to compute SHAP values homomorphically. Decrypt those SHAP values and compare them with the original SHAP values.
