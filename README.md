@@ -1,10 +1,12 @@
-## Explainability in Encrypted Neural Networks
+## Explainability in Fully Homomorphic Encrypted (FHE) Neural Networks
 
 Investigating how to provide insights into model decisions in FHE settings. This could involve creating mathematical frameworks that allow for the extraction of interpretable features from encrypted models, 
 enhancing trust in secure machine learning applications. The notebook `09_Neural_network_MNIST.ipynb` uses SHAP to do so using IBM-FHE toolkit. Way to run it is given in the file `notes.txt` Another FHE example is given in 
 `fhe_neuralnetwork_mnist.py` file.
 
-
+#### A bunch of exmaples using IBM-FHE toolkit is given at `https://github.com/IBM/helayers-examples`
+- Specifically, look at the `01_FHE_basics.ipynb` in that link to learn about the way of encoding and decoding the basic numerical computations and data.
+- Displaying ciphertexts and plaintexts for comparison.
 
 ### What we're Proposing:
 FHE-Inference: Run inference on encrypted data using an encrypted neural network, then decrypt the result and compare accuracy with plaintext inference. The proposal document is `XAI_FHE_NN.pdf`.
